@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Lit Lab",
+  "version": "0.0.0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gitlab.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "options.html",
+    "options.js",
+    "fonts.css",
+    "normalize.css",
+    "milligram.css"
+  ],
+  "icons": {
+    "16": "Icon16.png",
+    "48": "Icon48.png",
+    "128": "Icon128.png"
+  },
+  "browser_action": {
+    "default_title": "Click here to open options",
+    "default_popup": "options.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "litlab@daltonpearson.ca",
+      "strict_min_version": "42.0"
+    }
+  }
+}

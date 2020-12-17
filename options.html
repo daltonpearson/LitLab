@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LitLab Options</title>
+    <link rel="stylesheet" href="fonts.css">
+
+
+    <link rel="stylesheet" href="normalize.css">
+
+
+    <link rel="stylesheet" href="milligram.css">
+
+    <style>
+        body {
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        .button-primary {
+            background-color: #FF5722;
+            border-color: #FF5722;
+        }
+    </style>
+</head>
+
+<body style="width: 400px;">
+
+    <form id="options">
+        <h1>LitLab Options</h1>
+        <fieldset>
+            <label for="default_branch">Default Branch</label>
+            <input type="text" placeholder="branch" id="default_branch">
+            <label for="project_min_depth">Minimum Project Route Depth<br>(use 3 if you use subgroups otherwise use 2)</label>
+            <input type="number" placeholder="3" id="project_min_depth">
+            <label for="ignore_list">Ignore List (comma seperated)</label>
+            <textarea placeholder="https://gitlab.com/group1/group2" id="ignore_list"></textarea>
+            <label for="homepage">Homepage</label>
+            <input type="text" placeholder="https://gitlab.com/" id="homepage">
+            <div class="float-right">
+                <input type="checkbox" id="is_enabled">
+                <label class="label-inline" for="is_enabled">Enable</label>
+            </div>
+            <button class="button-primary" id="save">Save</button>
+            <label class="label-inline" for="save" id="status"></label>
+        </fieldset>
+    </form>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
